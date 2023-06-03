@@ -8,7 +8,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAABAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAgAAAAABAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Flota.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -30,12 +30,20 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ABAAAJEAIAAAAAAgAAAAAAAEAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAJEAIAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Plovilo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Kapetan" />
+      <Property Name="Lokacija" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Flota.Lokacija">
+    <Position X="2.25" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAYAA=</HashCode>
+      <FileName>Lokacija.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Consolas" Size="9" />
 </ClassDiagram>
