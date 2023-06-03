@@ -36,8 +36,15 @@ public class Regija
     {
         decimal ukPovrsina = 0;
         foreach (var farma in Farme)
-            foreach (var polje in farma.Polja)
-                ukPovrsina += polje.PovrsinaHa;
+            ukPovrsina += OdrediPovrsinuFarme(farma);
+        return ukPovrsina;
+    }
+
+    private static decimal OdrediPovrsinuFarme(Farma farma)
+    {
+        decimal ukPovrsina = 0;
+        foreach (var polje in farma.Polja)
+            ukPovrsina += polje.PovrsinaHa;
         return ukPovrsina;
     }
 }
