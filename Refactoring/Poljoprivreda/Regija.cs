@@ -8,28 +8,7 @@ public class Regija
 
     public decimal IzracunajDobit()
     {
-        decimal ukZarada = 0;
-        foreach(var farma in Farme)
-        {
-            foreach(var polje in farma.Polja)
-            {
-                decimal zaradaZaHa = 0; // prazno polje ne donosi dobit
-                switch (polje.Kultura)
-                {
-                    case Kulture.ZOB: zaradaZaHa = 1000;
-                        break;
-                    case Kulture.ZITO: zaradaZaHa = 3000;
-                        break;
-                    case Kulture.JECAM: zaradaZaHa = 2000;
-                        break;
-                    case Kulture.PROSO: zaradaZaHa = 1500;
-                        break;
-                }
-                ukZarada += zaradaZaHa * polje.PovrsinaHa;
-            }
-        }
-
-        return ukZarada;
+        return Farme.Aggregate(0m, (suma, farma) => suma + farma.IzracunajDobit());
     }
 
     public decimal OdrediUkupnuPovrsinu()
