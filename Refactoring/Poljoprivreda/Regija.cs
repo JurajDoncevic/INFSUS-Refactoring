@@ -32,7 +32,7 @@ public class Regija
         return ukZarada;
     }
 
-    public decimal UkupnaPovrsina()
+    public decimal OdrediUkupnuPovrsinu()
     {
         decimal ukPovrsina = 0;
         foreach (var farma in Farme)
