@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Flota.Flota">
+    <Position X="2" Y="1.25" Width="3" />
+    <AssociationLine Name="Plovila" Type="Flota.Plovilo">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.88" Y="0.466" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Flota.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Plovila" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Flota.Kapetan">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAABAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kapetan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flota.Plovilo">
+    <Position X="2" Y="3.75" Width="2.5" />
+    <AssociationLine Name="Kapetan" Type="Flota.Kapetan">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.268" Y="0.089" Height="0.162" Width="1.17" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAJEAIAAAAAAgAAAAAAAEAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Plovilo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kapetan" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Consolas" Size="9" />
+</ClassDiagram>
