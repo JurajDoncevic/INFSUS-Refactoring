@@ -7,9 +7,9 @@ public class Farma
 
     public decimal OdrediPovrsinu()
     {
-        decimal ukPovrsina = 0;
-        foreach (var polje in Polja)
-            ukPovrsina += polje.PovrsinaHa;
-        return ukPovrsina;
+        // this is ok...
+        // return Polje.Sum(polje => polje.PovrsinaHa);
+        // but this is safer for an empty enumerable
+        return Polja.Aggregate(0m, (suma, polje) => suma + polje.PovrsinaHa);
     }
 }
