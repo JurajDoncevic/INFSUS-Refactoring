@@ -3,7 +3,7 @@
   <Class Name="Poljoprivreda.Farma">
     <Position X="4" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAEAA=</HashCode>
       <FileName>Farma.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -12,18 +12,10 @@
   </Class>
   <Class Name="Poljoprivreda.Polje">
     <Position X="6.5" Y="0.75" Width="1.75" />
-    <AssociationLine Name="Kultura" Type="Poljoprivreda.Kulture">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.079" Y="0.32" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Polje.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Kultura" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Poljoprivreda.Regija">
     <Position X="0.75" Y="0.75" Width="2" />
@@ -33,15 +25,43 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAIAAAAACAAAAAAEAA=</HashCode>
+      <HashCode>ACAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAEAA=</HashCode>
       <FileName>Regija.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Farme" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="Poljoprivreda.PoljeZobi">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoljeZobi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Poljoprivreda.PoljeJecma">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoljeJecma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Poljoprivreda.PoljeZita">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoljeZita.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Poljoprivreda.PoljeProsa">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PoljeProsa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="Poljoprivreda.Kulture">
-    <Position X="6.75" Y="2.5" Width="1.5" />
+    <Position X="9.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAABIAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Kulture.cs</FileName>
