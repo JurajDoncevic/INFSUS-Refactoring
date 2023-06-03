@@ -9,6 +9,10 @@ public class Plovilo
     // lokacija
     public Lokacija Lokacija { get; set; }
 
+    public double UdaljenostOdLokacije(Lokacija lokacija)
+    {
+        return Lokacija.UdaljenostOd(lokacija);
+    }
     public void ProvjeriSOSLokaciju(Lokacija lokacija)
     {
         // Upisi koor lokacije u GPS

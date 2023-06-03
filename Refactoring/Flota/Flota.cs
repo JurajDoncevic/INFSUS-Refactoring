@@ -17,15 +17,15 @@ public class Flota
     private Plovilo DohvatiNajblizeFlotinoPlovilo(Lokacija lokacija)
     {
         Plovilo najblizePlovilo = Plovila.First(); // uvijek ima plovila u Floti
-        double najblizaUdaljenost = najblizePlovilo.Lokacija.UdaljenostOd(lokacija);
+        double najblizaUdaljenost = najblizePlovilo.UdaljenostOdLokacije(lokacija);
 
         // pronadi najblize plovilo unesrecenom plovilu
         foreach (var flotinoPlovilo in Plovila)
         {
 
-            if (flotinoPlovilo.Lokacija.UdaljenostOd(lokacija) < najblizaUdaljenost)
+            if (flotinoPlovilo.UdaljenostOdLokacije(lokacija) < najblizaUdaljenost)
             {
-                najblizaUdaljenost = flotinoPlovilo.Lokacija.UdaljenostOd(lokacija);
+                najblizaUdaljenost = flotinoPlovilo.UdaljenostOdLokacije(lokacija);
                 najblizePlovilo = flotinoPlovilo;
             }
         }
