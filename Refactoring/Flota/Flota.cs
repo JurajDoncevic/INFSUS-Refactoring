@@ -8,21 +8,28 @@ public class Flota
 
     public void ZoviUPomocNajblizeFlotinoPlovilo(Plovilo unesrecenoPlovilo)
     {
+        Plovilo najblizePlovilo = DohvatiNajblizeFlotinoPlovilo(unesrecenoPlovilo);
+
+        // najblize plovilo flote neka provjeri lokaciju
+        najblizePlovilo.ProvjeriSOSLokaciju(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
+    }
+
+    private Plovilo DohvatiNajblizeFlotinoPlovilo(Plovilo plovilo)
+    {
         Plovilo najblizePlovilo = Plovila.First(); // uvijek ima plovila u Floti
-        double najblizaUdaljenost = najblizePlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
+        double najblizaUdaljenost = najblizePlovilo.UdaljenostOd(plovilo.LokacijaX, plovilo.LokacijaY);
 
         // pronadi najblize plovilo unesrecenom plovilu
         foreach (var flotinoPlovilo in Plovila)
         {
 
-            if (flotinoPlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY) < najblizaUdaljenost)
+            if (flotinoPlovilo.UdaljenostOd(plovilo.LokacijaX, plovilo.LokacijaY) < najblizaUdaljenost)
             {
-                najblizaUdaljenost = flotinoPlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
+                najblizaUdaljenost = flotinoPlovilo.UdaljenostOd(plovilo.LokacijaX, plovilo.LokacijaY);
                 najblizePlovilo = flotinoPlovilo;
             }
         }
 
-        // najblize plovilo flote neka provjeri lokaciju
-        najblizePlovilo.ProvjeriSOSLokaciju(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
+        return najblizePlovilo;
     }
 }
