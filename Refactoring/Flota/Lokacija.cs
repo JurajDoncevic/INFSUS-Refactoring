@@ -1,8 +1,8 @@
 ﻿namespace Flota;
 public class Lokacija
 {
-    public double LokacijaX { get; set; } // 0 - 10000
-    public double LokacijaY { get; set; } // 0 - 10000
+    public double X { get; set; } // 0 - 10000
+    public double Y { get; set; } // 0 - 10000
 
     public double VratiLokacijuXStupnjevi()
     {
@@ -20,6 +20,6 @@ public class Lokacija
 
     public double UdaljenostOd(Lokacija lokacija)
     {
-        return Math.Sqrt(Math.Pow(LokacijaX - lokacija.LokacijaX, 2) + Math.Pow(LokacijaY - lokacija.LokacijaY, 2));
+        return Math.Sqrt(Math.Pow(X - lokacija.X, 2) + Math.Pow(Y - lokacija.Y, 2));
     }
 }
