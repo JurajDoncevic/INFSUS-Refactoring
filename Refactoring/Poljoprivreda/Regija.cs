@@ -1,6 +1,6 @@
 ﻿namespace Poljoprivreda;
 
-class Regija
+public class Regija
 {
     public string Naziv { get; set; }
     public List<Farma> Farme { get; set; }

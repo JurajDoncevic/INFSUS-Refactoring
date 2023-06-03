@@ -1,35 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Flota;
 
-namespace Flota
+public class Flota
 {
-    class Flota
+    public string Naziv { get; set; }
+    public List<Plovilo> Plovila { get; set; }
+
+
+    public void ZoviUPomocNajblizeFlotinoPlovilo(Plovilo unesrecenoPlovilo)
     {
-        public string Naziv { get; set; }
-        public List<Plovilo> Plovila { get; set; }
+        Plovilo najblizePlovilo = Plovila.First(); // uvijek ima plovila u Floti
+        double najblizaUdaljenost = najblizePlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
 
-
-        public void ZoviUPomocNajblizeFlotinoPlovilo(Plovilo unesrecenoPlovilo)
+        // pronadi najblize plovilo unesrecenom plovilu
+        foreach (var flotinoPlovilo in Plovila)
         {
-            Plovilo najblizePlovilo = Plovila.First(); // uvijek ima plovila u Floti
-            double najblizaUdaljenost = najblizePlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
 
-            // pronadi najblize plovilo unesrecenom plovilu
-            foreach (var flotinoPlovilo in Plovila)
+            if (flotinoPlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY) < najblizaUdaljenost)
             {
-
-                if (flotinoPlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY) < najblizaUdaljenost)
-                {
-                    najblizaUdaljenost = flotinoPlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
-                    najblizePlovilo = flotinoPlovilo;
-                }
+                najblizaUdaljenost = flotinoPlovilo.UdaljenostOd(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
+                najblizePlovilo = flotinoPlovilo;
             }
-
-            // najblize plovilo flote neka provjeri lokaciju
-            najblizePlovilo.ProvjeriSOSLokaciju(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
         }
+
+        // najblize plovilo flote neka provjeri lokaciju
+        najblizePlovilo.ProvjeriSOSLokaciju(unesrecenoPlovilo.LokacijaX, unesrecenoPlovilo.LokacijaY);
     }
 }

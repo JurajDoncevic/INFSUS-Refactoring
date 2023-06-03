@@ -1,6 +1,6 @@
 ﻿namespace Poljoprivreda;
 
-enum Kulture
+public enum Kulture
 {
     ZOB,
     ZITO,
