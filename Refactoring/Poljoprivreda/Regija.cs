@@ -34,9 +34,9 @@ public class Regija
 
     public decimal OdrediUkupnuPovrsinu()
     {
-        decimal ukPovrsina = 0;
-        foreach (var farma in Farme)
-            ukPovrsina += farma.OdrediPovrsinu();
-        return ukPovrsina;
+        // this is ok...
+        // return Farme.Sum(farma => farma.OdrediPovrsinu());
+        // but this is safer for an empty enumerable
+        return Farme.Aggregate(0m, (suma, farma) => suma + farma.OdrediPovrsinu());
     }
 }
